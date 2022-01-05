@@ -1,0 +1,31 @@
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e1ea;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+}
+
+.box {
+  padding: 15px 20px;
+  color: #b9b9b9;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 34px;
+  color: #b9b9b9;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  width: 172px;
+  justify-content: space-between;
+}
