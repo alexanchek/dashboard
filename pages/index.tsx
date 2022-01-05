@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../parts/Header/Header";
 import Dashboard from "../parts/Main/Dashboard/Dashboard";
 import Footer from "../parts/Footer/Footer";
+import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
@@ -13,11 +14,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <div><Header/></div>
-        <div><Dashboard /></div>
-        <div><Footer/></div>
-      </div>
+        <div className={styles.container}>
+        <Header/>
+        <Dashboard />
+        <Footer/>
+        </div>
     </div>
   );
 };
