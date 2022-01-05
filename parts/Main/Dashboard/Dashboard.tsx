@@ -1,5 +1,7 @@
 import React, {FC} from 'react';
-import Header from '../../components/Header/Htag';
+import Header from '../../../components/Header/Htag';
+import TopPanel from '../TopPanel/TopPanel';
+import styles from './Dashboard.module.scss';
 
 const Dashboard: FC = (): JSX.Element => {
     return (
@@ -7,6 +9,9 @@ const Dashboard: FC = (): JSX.Element => {
             <Header tag='h1'>
                 Dashboard
             </Header>
+            <div className={styles.box}>
+                <TopPanel/>
+            </div>
         </div>
     );
 };

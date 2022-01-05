@@ -1,9 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import SmallCard from "../components/SmallCard/SmallCard";
-import Htag from "../components/Header/Htag";
-import ChartIcon from "../helpers/cardIcons/icons/blank.svg";
-import TrendUp from "../helpers/trendsIcons/icons/trendUp.svg";
+import Header from "../parts/Header/Header";
+import Dashboard from "../parts/Main/Dashboard/Dashboard";
+import Footer from "../parts/Footer/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -15,20 +14,9 @@ const Home: NextPage = () => {
       </Head>
 
       <div>
-        <SmallCard
-          TrendIcon={TrendUp}
-          Icon={ChartIcon}
-          amount={1478286}
-          percent="4.07"
-          renderCase="visits"
-        >
-          TEST
-        </SmallCard>
-        <Htag tag={"h1"}>Header</Htag>
-        <Htag tag={"h2"}>Header</Htag>
-        <Htag tag={"h3"}>Header</Htag>
-        <div>MAIN</div>
-        <div>FOOTER</div>
+        <div><Header/></div>
+        <div><Dashboard /></div>
+        <div><Footer/></div>
       </div>
     </div>
   );

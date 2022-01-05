@@ -3,10 +3,12 @@ import { CardProps } from "./SmallCard.props";
 import styles from "./SmallCard.module.scss";
 import cn from "classnames";
 import Htag from "../Header/Htag";
+import TrendUp from "../../helpers/trendsIcons/icons/trendUp.svg";
+import TrendDown from "../../helpers/trendsIcons/icons/trendDown.svg";
+import TrendZero from "../../helpers/trendsIcons/icons/trendZero.svg";
 
 const SmallCard: FC<CardProps> = ({
   Icon,
-  TrendIcon,
   renderCase,
   amount,
   percent,
@@ -32,13 +34,19 @@ const SmallCard: FC<CardProps> = ({
 
   return (
     <div className={cn(styles.box)} {...props}>
-      <Icon />
+      {Icon}
       <div>
         <Htag tag={"h3"}>{amount.toLocaleString("ru")}</Htag>
         <div className={styles.title}>{renderText()}</div>
         <div className={styles.bottom}>
           <div className={styles.trends}>
-            <TrendIcon />
+            {parseFloat(percent) > 0 ? (
+              <TrendUp />
+            ) : parseFloat(percent) === 0 ? (
+              <TrendZero />
+            ) : (
+              <TrendDown />
+            )}
           </div>
           <div className={styles.text}>
             <span
