@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { CardProps } from "./SmallCard.props";
 import styles from "./SmallCard.module.scss";
 import cn from "classnames";
-import Htag from "../Header/Htag";
+import Htag from "../Htag/Htag";
 import TrendUp from "../../helpers/trendsIcons/icons/trendUp.svg";
 import TrendDown from "../../helpers/trendsIcons/icons/trendDown.svg";
 import TrendZero from "../../helpers/trendsIcons/icons/trendZero.svg";

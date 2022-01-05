@@ -1,0 +1,23 @@
+.box {
+    position: relative;
+}
+
+.loupe {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+}
+
+.loupe::placeholder {
+    color: var(--placeholder);
+}
+
+.input {
+  width: 270px;
+  height: 40px;
+
+  border: none;
+  background: #eff0f6;
+  border-radius: 6px;
+  padding-left: 40px;
+}

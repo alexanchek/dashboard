@@ -1,0 +1,32 @@
+.box {
+  position: relative;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  display: flex;
+}
+
+.notification {
+  border-radius: 32px;
+}
+
+.avatarColor {
+  background-color: #f5efff;
+  border-radius: 32px;
+}
+
+.alert {
+  position: relative;
+}
+
+.message {
+  width: 9px;
+  height: 9px;
+  background: #f26464;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
