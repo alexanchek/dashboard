@@ -5,28 +5,46 @@ import cn from "classnames";
 import Htag from "../Header/Htag";
 
 const SmallCard: FC<CardProps> = ({
+  Icon,
+  TrendIcon,
   renderCase,
   amount,
   percent,
   className,
   ...props
 }): JSX.Element => {
-    console.log(renderCase);
+  console.log(renderCase);
 
   const renderText = (): JSX.Element => {
     switch (renderCase) {
       case "visits":
         return <>Total visits</>;
+      case "articles":
+        return <>Total articles</>;
+      case "subscriptions":
+        return <>Total subscriptions</>;
+      case "authors":
+        return <>Total authors</>;
       default:
-        return <>1</>;
+        return <></>;
     }
   };
 
   return (
     <div className={cn(styles.box)} {...props}>
-      <Htag tag={"h3"}>{amount.toLocaleString('ru')}</Htag>
-      <div className={styles.title}>{renderText()}</div>
-      <div className={styles.text}>{percent}% Last month</div>
+      <Icon />
+      <div>
+        <Htag tag={"h3"}>{amount.toLocaleString("ru")}</Htag>
+        <div className={styles.title}>{renderText()}</div>
+        <div className={styles.bottom}>
+          <div className={styles.trends}>
+            <TrendIcon />
+          </div>
+          <div className={styles.text}>
+            <span className={styles.percent}>{percent}%</span> Last month
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
