@@ -41,7 +41,16 @@ const SmallCard: FC<CardProps> = ({
             <TrendIcon />
           </div>
           <div className={styles.text}>
-            <span className={styles.percent}>{percent}%</span> Last month
+            <span
+              className={cn(styles.percent, {
+                [styles.green]: parseFloat(percent) > 0,
+                [styles.yellow]: parseFloat(percent) === 0,
+                [styles.red]: parseFloat(percent) < 0,
+              })}
+            >
+              {percent}%
+            </span>{" "}
+            Last month
           </div>
         </div>
       </div>
