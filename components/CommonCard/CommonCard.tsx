@@ -8,19 +8,15 @@ const CommonCard: FC<CommonCardProps> = ({
   width,
   height,
   shadow = false,
+  purple,
   children,
   ...props
 }): JSX.Element => {
-    const size = {
-        width: width ? `${width}` : '100%',
-        height: height ? `${height}` : ''
-    }
-
   return (
     <div
-    style={size}
-      className={classNames(styles.box, {
+      className={classNames(styles.box, className, {
         [styles.shadow]: shadow,
+        [styles.purple]: purple,
       })}
       {...props}
     >

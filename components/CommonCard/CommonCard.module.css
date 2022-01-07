@@ -1,7 +1,7 @@
 .box {
-    border-radius: 10px;
-    background: var(--white);
-    padding: 20px;
+  border-radius: 10px;
+  background: var(--white);
+  padding: 20px;
 }
 
 .shadow {
@@ -9,5 +9,7 @@
 }
 
 .purple {
-    background: var(--primary);
+  background: var(--primary);
+  color: white;
+  padding: 0;
 }
