@@ -19,9 +19,10 @@ const SideBlock: FC = (): JSX.Element => {
           </div>
           <div className={styles.text}>28 Daily Avg.</div>
         </div>
-        <Chart className={styles.img}/>
+        <div className={styles.svgBox}>
+          <Chart className={styles.img} />
+        </div>
       </CommonCard>
-
     </>
   );
 };
