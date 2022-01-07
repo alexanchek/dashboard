@@ -1,11 +1,13 @@
 import React, { FC } from "react";
 import { CardProps } from "./SmallCard.props";
 import styles from "./SmallCard.module.scss";
+import { RenderText } from "./renderText";
 import cn from "classnames";
 import Htag from "../Htag/Htag";
 import TrendUp from "../../helpers/trendsIcons/icons/trendUp.svg";
 import TrendDown from "../../helpers/trendsIcons/icons/trendDown.svg";
 import TrendZero from "../../helpers/trendsIcons/icons/trendZero.svg";
+import CommonCard from "../CommonCard/CommonCard";
 
 const SmallCard: FC<CardProps> = ({
   Icon,
@@ -15,29 +17,14 @@ const SmallCard: FC<CardProps> = ({
   className,
   ...props
 }): JSX.Element => {
-  console.log(renderCase);
-
-  const renderText = (): JSX.Element => {
-    switch (renderCase) {
-      case "visits":
-        return <>Total visits</>;
-      case "articles":
-        return <>Total articles</>;
-      case "subscriptions":
-        return <>Total subscriptions</>;
-      case "authors":
-        return <>Total authors</>;
-      default:
-        return <></>;
-    }
-  };
-
   return (
-    <div className={cn(styles.box)} {...props}>
+    <CommonCard className={cn(styles.box)} {...props}>
       {Icon}
       <div>
         <Htag tag={"h3"}>{amount.toLocaleString("ru")}</Htag>
-        <div className={styles.title}>{renderText()}</div>
+        <div className={styles.title}>
+          <RenderText renderCase={renderCase} />
+        </div>
         <div className={styles.bottom}>
           <div className={styles.trends}>
             {parseFloat(percent) > 0 ? (
@@ -57,12 +44,12 @@ const SmallCard: FC<CardProps> = ({
               })}
             >
               {percent}%
-            </span>{" "}
+            </span>
             Last month
           </div>
         </div>
       </div>
-    </div>
+    </CommonCard>
   );
 };
 

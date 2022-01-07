@@ -6,3 +6,7 @@ export interface CardProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivEleme
     percent: string;
     renderCase: 'visits' | 'articles' | "subscriptions" | 'authors';
 }
+
+export interface IRenderCase {
+    renderCase: 'visits' | 'articles' | "subscriptions" | 'authors';
+} 
