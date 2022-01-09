@@ -5,11 +5,11 @@ import { mainCards } from "../../../helpers/dashboardCards/mainCards";
 const TopPanel: FC = (): JSX.Element => {
   return (
     <>
-      {mainCards.map(({ Icon, renderCase }) => {
+      {mainCards.map(({ Icon, renderCase }, index) => {
         return (
           <>
             <SmallCard
-              key={renderCase}
+              key={index}
               Icon={Icon}
               renderCase={renderCase}
               amount={1478286}

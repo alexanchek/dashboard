@@ -5,8 +5,6 @@ import classNames from "classnames";
 
 const CommonCard: FC<CommonCardProps> = ({
   className,
-  width,
-  height,
   shadow = false,
   purple,
   children,
