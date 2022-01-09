@@ -4,6 +4,7 @@ import Header from "../parts/Header/Header";
 import Dashboard from "../parts/Main/Dashboard/Dashboard";
 import Footer from "../parts/Footer/Footer";
 import styles from '../styles/Home.module.css';
+import SignIn from "../parts/SignIn/SignIn";
 
 const Home: NextPage = () => {
   return (
@@ -15,9 +16,10 @@ const Home: NextPage = () => {
       </Head>
 
         <div className={styles.container}>
-        <Header/>
+        {/* <Header/>
         <Dashboard />
-        <Footer/>
+        <Footer/> */}
+        <SignIn />
         </div>
     </div>
   );

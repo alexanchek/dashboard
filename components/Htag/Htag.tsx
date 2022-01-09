@@ -10,6 +10,7 @@ const Htag: FC<HeaderProps> = ({ children, className, tag, ...props }): JSX.Elem
         [styles.h1]: tag == "h1",
         [styles.h2]: tag == "h2",
         [styles.h3]: tag == "h3",
+        [styles.h4]: tag == "h4",
       })}
       {...props}
     >
